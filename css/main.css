@@ -1,0 +1,78 @@
+/* selector principal en css */
+:root {
+  --theme-color: #fff;
+  --primary-color: #0f7058;
+  /* --secundary-color: #2d364c; */
+  --secundary-color: #130d0d; 
+  --text-color-inverse: #fff;
+  --text-color: #231f20;
+  --navbar-shallow-color: #e5e5e5;
+  --menu-mobile-background-color: #3a4460;
+  --font: "Roboto", sans-serif;
+}
+/* propiedades para efectos finales del portafolio */
+/* suavizar el scroll */
+html{
+  scroll-behavior: smooth;
+}
+section[id]{
+  /* se aplica por el menu fixed */
+  scroll-margin-top:70px ;
+}
+/* fin de enlaces */
+
+/* reseteo */
+body {
+  margin: 0;
+  padding-top:  70px;
+  background-color: var(--theme-color);
+  color: var(--text-color);
+  font-family: var(--font);
+  font-size: 16px;
+  box-sizing: border-box;
+  overflow-x: hidden; /*oculta la barra de desplazamiento cuando el elemento sobrepasa el ancho */
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+/* padding de la seccion principal del sitio */
+.horizontal-padding {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.vertical-padding {
+  padding-top: 25px;
+  padding-bottom: 25px;
+ 
+}
+.btnmas{
+   display: inline-block;
+   width: 40px;
+   border-radius: 50%;
+   background-color:rgb(129, 17, 129);
+   color:#fff;
+   transition: 0.3s;
+}
+.btnmas:hover{
+   background-color:#a945c7;
+   cursor:pointer;
+   font-size: 105%;
+}
+
+@media (min-width: 950px) {
+  .horizontal-padding {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .vertical-padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+

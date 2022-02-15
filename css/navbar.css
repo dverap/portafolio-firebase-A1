@@ -1,0 +1,138 @@
+.topheader {
+  position: fixed; /* se queda fijado en su posicion */
+  /* box-shadow: 10px 4px 5px var(--theme-color); */
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100; /* para que la imagen se coloque siempre por detras */
+}
+.topnav {
+  display: flex; /*por defecto los elementos estaran en filas uno al lado del otro */
+  justify-content: space-between;
+  padding: 10px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center; /*los centra horizontalmente respecto a su espacio*/
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--theme-color);
+  margin-left:10px
+  
+}
+.logo img {
+  border-radius: 50%;
+}
+.logo span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* menu */
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 0 15px;
+}
+.menu a {
+   color: var(--theme-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px; /* el texto se centra a esa altura en esa linea*/
+  text-transform: uppercase;
+  position: relative; /* padre del elemento que tiene position absolute */
+}
+/* !seupdoselectores 
+*after el contenido nuevo se coloca despues del que tenga el enlace 
+*before el contenido nuevo se coloca antes del que tenga el enlace
+*position:absolute el elemento se posiciona respecto al padre si este tiene position relative(.menu a)
+*sino  no tiene el elemento se posiciona respecto al body  */
+.menu a::after {
+  content: "";
+  background-color: var(--secundary-color);;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px); /* para hacer calculos se usa calc */
+  width: 100%;
+  height: 4px;
+  opacity: 0; /* para que no se vea */
+  transition: opacity 0.5s;
+}
+.menu a.selected::after,
+.menu a:hover::after {
+  opacity: 1;
+}
+.menu a:hover{
+    color:var(--secundary-color)
+}
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+/*! media querys */
+/* en dispositivos de 0 a 950px se aplican estos estilos*/
+@media (max-width: 950px) {
+  /* body{
+    background-color: blue;
+  } */
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: var(--menu-mobile-background-color);
+    /* coloca una barra vertical cuando el contenido sobresalga del viewport */
+    overflow-y: auto;
+    opacity: 0.5;
+    opacity: 0;
+    /* los elementos que no se ven tampoco reacciones a evento */
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .menu li {
+    padding: 0;
+  }
+  .menu a {
+    color: var(--text-color-inverse);
+    line-height: 70px; /* el texto se centra a esa altura en esa linea*/
+    font-size: 25px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+    /* se quita el borde y el color del fondo del boton */
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .close-menu {
+    align-self: flex-end;
+    padding: 20px 15px;
+  }
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+  /* !seupdoselectores */
+  .menu a::after {
+    content: none;
+  } 
+  .menu a:hover,
+  .menu a.selected {
+    color: var(--theme-color);
+  }
+
+}

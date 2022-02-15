@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Daniel Vera Paredes" />
+    <meta name="description" content="Portafolio web" />
+    <meta name="keywords" content="acerca, cursos, experiencia, curriculum" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Vera</title>
+    <!-- fuentes de google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- estilos normalizados para todos los navegadores -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- estilos principales del sitio -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- estilos por secciones del sitio -->
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="stylesheet" href="./css/skill.css" />
+    <link rel="stylesheet" href="./css/experiencies.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/course.css" />
+    <!-- <link rel="stylesheet" href="./css/modal.css" /> -->
+    <link rel="stylesheet" href="./css/modal_js.css" />
+    <script defer src="js/app.js" type="module"></script>
+  </head>
+  <body>
+    <header class="topheader">
+      <nav class="topnav">
+        <a href="#" class="logo">
+          <img height="50" width="50" src="img/fotod.png" alt="programador" />
+          <div class="logo">
+            Daniel Vera<br />
+            { Teacher }
+          </div>
+        </a>
+        <!-- despues del diseño de menu de opciones -->
+        <!-- aria-label. informacion proporcionada para usuarios con capacidades especiales con un lector -->
+        <button class="open-menu" aria-label="Abrir menú">
+          <img src="img/hamburger-icon.svg" alt="abrir menú" />
+        </button>
+        <ul class="menu">
+          <!-- despues del diseño de menu de opciones -->
+          <button class="close-menu" aria-label="Cerrar menú">
+            <img src="img/close-icon.svg" alt="cerrar menú" />
+          </button>
+          <li><a href="#profile" class="selected">Perfil</a></li>
+          <li><a href="#experience">Experiencia</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#courses">Cursos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- informacion del perfil -->
+    <div class="horizontal-padding vertical-padding">
+      <section class="profile" id="profile">
+        <div class="profile-info">
+          <h1 class="profile-title">Hola, soy <br />Daniel Vera</h1>
+          <p class="profile-details">
+            Soy un docente apasionado por la enseñanza del desarrollo de
+            software, con más de 20 años de experiencia en varios lenguajes de
+            programación de escritorio y con mas de 5 años de experiencia en las
+            teconolgias y desarrollo del ambiente web.
+          </p>
+          <button class="profile-btn">Descargar cv</button>
+        </div>
+        <div class="profile-img-section">
+          <img
+            class="profile-img"
+            src="img/fotodaniel2.png"
+            alt="programador"
+          />
+          <div class="profile-img-line"></div>
+        </div>
+      </section>
+    </div>
+    <!-- informacion de la experiencia -->
+    <section class="experiences" id="experience">
+      <img src="img/wave.svg" alt="división" class="wave" />
+      <div class="experiences-body">
+        <h2 class="experiences-title">Experiencia</h2>
+        <div class="experiences-grid">
+          <div class="empty"></div>
+          <div class="line"></div>
+          <div class="experience">
+            <div class="experience-date">2020-2021</div>
+            <div class="experience-company">Sass</div>
+            <div class="experience-position">Senior Software Engineer</div>
+            <div class="experience-description">
+              Desarrollo de la interfaz y el back-end de un SaaS usado por
+              cientos de clientes para desplegar anuncios a escala. Usamos
+              React.js, TypeScript, Cypress, Node.js, Serverless y la
+              infraestructura de AWS (entre otras tecnologías).
+            </div>
+          </div>
+          <div class="experience experience_left">
+            <div class="experience-date">2018-2020</div>
+            <div class="experience-company">Sga</div>
+            <div class="experience-position">Senior Software Engineer</div>
+            <div class="experience-description">
+              Implementación de una nueva versión de la plataforma que permite
+              de forma inteligente emparejar estudiantes con instituciones
+              educativas. Usamos tecnologías como React.js, GraphQL,
+              ElasticSearch, Node.js y otras que nos permitieron lograr una
+              mejora notable en el rendimiento de la plataforma.
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="line"></div>
+          <div class="experience">
+            <div class="experience-date">2016-2018</div>
+            <div class="experience-company">Acurio</div>
+            <div class="experience-position">Senior Software Engineer</div>
+            <div class="experience-description">
+              Desarrollado de soluciones para un cliente en la industia
+              inmobiliaria y otro líder en servicios médicos en USA.
+              Implementamos una arquitectura desacoplada usando .Net para el
+              back-end y React.js en el front-end. Además de brindar
+              capacitaciones a la empresa sobre temas como Principios SOLID y
+              DDD.
+            </div>
+          </div>
+          <!-- nuevo -->
+          <div class="experience experience_left">
+            <div class="experience-date">2018-2020</div>
+            <div class="experience-company">Sga2</div>
+            <div class="experience-position">Senior Software Engineer</div>
+            <div class="experience-description">
+              Implementación de una nueva versión de la plataforma que permite
+              de forma inteligente emparejar estudiantes con instituciones
+              educativas. Usamos tecnologías como React.js, GraphQL,
+              ElasticSearch, Node.js y otras que nos permitieron lograr una
+              mejora notable en el rendimiento de la plataforma.
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="empty"></div>
+          <!-- fin nuevo -->
+        </div>
+      </div>
+      <img src="img/wave.svg" alt="división" class="wave wave_bottom" />
+    </section>
+
+    <!-- informacion de habilidades -->
+    <div class="horizontal-padding vertical-padding">
+      <section class="skills" id="skills">
+        <h2 class="skills-title"></h2>
+        <ul class="skills-list">
+        
+        
+        </ul>
+      </section>
+    </div>
+    <!-- informacion de cursos -->
+    <div class="horizontal-padding vertical-padding">
+      <h2 class="cursos-title">Cursos</h2>
+      <section class="cursos" id="courses">
+        <div class="card">
+          <div class="imgBx">
+            <img src="./img/js.png" alt="" />
+          </div>
+          <div class="content">
+            <h2>JavaAscript</h2>
+            <p>
+              Es el lenguaje de programación encargado de dotar mayor dinamismo
+              a las páginas web.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="./img/css3.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h2>CSS</h2>
+            <p>
+              Es un lenguaje informático que especifica cómo se presentan los
+              documentos a los usuarios
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="./img/html.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h2>HTML</h2>
+            <p>
+              Es el lenguaje con el que se define el contenido de las páginas
+              web.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- informacion de contacto -->
+    <div id="contacto" class="horizontal-padding">
+      <section class="contact" id="contact">
+        <div class="contact-dat">
+          <h2 class="contact-title">Contacto</h2>
+          <p>Direccion:</p>
+          <p>Milagro, Ecuador</p>
+          <p>email:</p>
+          <p>dverap@unemi.edu.ec</p>
+          <p>Deje su mensaje y con gusto le respondere</p>
+          <div class="contact-dat-iconos">
+            <p>🛁</p>
+            <p>🧙</p>
+            <p>🥋</p>
+            <p>🦄</p>
+          </div>
+        </div>
+        <form action="" class="contact-form">
+          <div class="contact-form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" />
+          </div>
+          <div class="contact-form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+          </div>
+          <div class="contact-form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea name="" id="mensaje" cols="30" rows="4"></textarea>
+          </div>
+          <!-- <a href="#modal" id="enviar" class="contact-form-enviar">
+            Enviar
+          </a> -->
+          <a href="#" id="enviar" class="contact-form-enviar">
+            Enviar
+          </a>
+        </form>
+      </section>
+    </div>
+    <!-- modal del contacto -->
+    <section id="modal" class="modal ">
+      <div class="modal__container">
+        <figure class="modal__picture">
+          <img src="./img/fotod.png" alt="" class="modal__img" />
+        </figure>
+        <h2 class="modal__title">
+          Gracias por su inscripcion, le saluda
+          <span class="modal__title modal__title--bold">Daniel Vera</span>
+        </h2>
+        <p id="informacion" class="modal__paragraph">
+         
+        </p>
+        <!-- <a href="#contacto" class="modal__close">Aceptar</a> -->
+        <button class="modal__close">Aceptar</button>
+      </div>
+    </section>
+    
+       <!-- modal habilidades -->
+    <section id="modal__habilidades" class="modal__habilidades">
+      <div class="modal__container__habilidades">
+        
+        <div class="modal__paragraph__habilidades">
+          <!-- formulario de habilidades -->
+          <form action="" class="contact-form" id="habilidades__form">
+            <div class="contact-form-group">
+              <h2 for="nombre" class="titulo">INGRESAR HABILIDADES</h2>
+            </div>
+            <div class="contact-form-group">
+              <label for="descripcion">Descripcion</label>
+              <input type="text" id="descripcion" />
+            </div>
+            <button type="submit" id="grabar__habilidades" class="grabar__habilidades">
+              Insertar
+            </button>
+          </form>
+          <!-- Listar Habilidades -->
+          <div class="consulta none table-responsive" id="consulta">
+               <h3>Consulta de Habilidades</h3>
+              <table border = 0 class="consulta-est" id="consulta-est" border="1">
+                <thead>
+                    <th >Habilidad</th>
+                    <th >Acciones</th>
+                </thead>
+                <tbody class="detalle-est" id="detalle-habilidades">
+                 
+                </tbody>
+              </table>
+          </div>
+        </div>
+
+        <!-- <a href="#contacto" class="modal__close">Aceptar</a> -->
+        <button class="modal__close__habilidades">Regresar</button>
+      </div>
+    </section>
+    <!-- fin de modal habilidades -->
+    
+  </body>
+</html>
